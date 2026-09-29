@@ -1,0 +1,12 @@
+streamlit
+langgraph
+google-genai
+pydantic
+python-dotenv
+Pillow
+imagehash
+
+# Tracing / evaluation (Arize AX)
+arize-otel
+openinference-instrumentation-google-genai
+openinference-instrumentation-langchain
