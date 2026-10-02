@@ -102,13 +102,13 @@ def _parse_response(response) -> PhotoAssessment:
 PROMPT_TEMPLATE = """You are helping a photographer cull photos from a photo shoot.
 
 Score this photo on:
+If there is no human subject in the frame, give three scores of zero.
 - sharpness (1-10): is the SUBJECT in sharp focus? Intentional motion blur \
 in the background of a panning shot is fine and should NOT lower this \
 score -- only penalize blur on the subject itself.
 - framing (1-10): is the subject well-positioned, not awkwardly cropped, \
 horizon straight?
-- expression (1-10): if a human subject - eyes open, emotion visible. \
-If inanimate subject or animal, is it a good moment to capture?
+- expression (1-10): if a human subject - eyes open, emotion visible.
 
 The photographer's creative preferences for this batch: "{preferences}"
 
