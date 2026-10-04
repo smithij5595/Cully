@@ -1,0 +1,55 @@
+{
+  "name": "Cully",
+  "description": "Gemini-powered batch photo culling with Streamlit and LangGraph.",
+  "repository": "https://github.com/smithij5595/Cully",
+  "website": "https://github.com/smithij5595/Cully",
+  "keywords": [
+    "streamlit",
+    "langgraph",
+    "photo-culling"
+  ],
+  "stack": "heroku-24",
+  "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "env": {
+    "GOOGLE_API_KEY": {
+      "description": "Gemini API key used to assess uploaded photos.",
+      "required": true
+    },
+    "ARIZE_SPACE_ID": {
+      "description": "Optional Arize AX space ID for tracing.",
+      "required": false
+    },
+    "ARIZE_API_KEY": {
+      "description": "Optional Arize AX API key for tracing.",
+      "required": false
+    },
+    "GEMINI_MODEL": {
+      "description": "Gemini model used for photo assessment.",
+      "value": "gemini-3.1-flash-lite"
+    },
+    "GEMINI_MIN_INTERVAL": {
+      "description": "Minimum delay between Gemini calls, in seconds.",
+      "value": "0"
+    },
+    "GEMINI_MAX_IMAGE_EDGE": {
+      "description": "Maximum prepared image edge, in pixels.",
+      "value": "2000"
+    },
+    "GEMINI_JPEG_QUALITY": {
+      "description": "JPEG quality for prepared images.",
+      "value": "85"
+    },
+    "GEMINI_MAX_ATTEMPTS": {
+      "description": "Maximum attempts for retryable Gemini errors.",
+      "value": "4"
+    },
+    "GEMINI_THINKING_LEVEL": {
+      "description": "Gemini thinking level.",
+      "value": "MINIMAL"
+    }
+  }
+}
