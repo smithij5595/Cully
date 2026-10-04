@@ -37,7 +37,7 @@
     },
     "GEMINI_MAX_IMAGE_EDGE": {
       "description": "Maximum prepared image edge, in pixels.",
-      "value": "2000"
+      "value": "768"
     },
     "GEMINI_JPEG_QUALITY": {
       "description": "JPEG quality for prepared images.",
